@@ -18,4 +18,6 @@ public class ScoreService : IScoresService
     {
         Debug.Log(url + "   " + score);
     }
+
+    public strange.extensions.dispatcher.eventdispatcher.api.IEventDispatcher dispatcher { get; set; }
 }
