@@ -16,9 +16,10 @@ public class GameContext : MVCSContext
         commandBinder.Bind(CommandEnum.RequestScore).To<RequestCommand>();
 
         //service
-        injectionBinder.Bind<IScoresService>().To<ScoreService>();
+        injectionBinder.Bind<IScoresService>().To<ScoreService>().ToSingleton();
 
         //model
+        injectionBinder.Bind<ScoresModel>().To<ScoresModel>().ToSingleton();
 
         //mediator
         mediationBinder.Bind<CubeView>().To<CubeMediator>();
